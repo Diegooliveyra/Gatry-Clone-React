@@ -1,5 +1,6 @@
+import React from 'react';
 import PromotionCard from 'Components/Promotion/Card/Card';
-import './style/App.css';
+import 'style/App.css';
 
 const promotion = {
   id: 1,
@@ -18,12 +19,12 @@ const promotion = {
   ],
 };
 
-function App() {
+const PagePromotionSearch = () => {
   return (
     <div className="App">
       <PromotionCard promotion={promotion} />
     </div>
   );
-}
+};
 
-export default App;
+export default PagePromotionSearch;

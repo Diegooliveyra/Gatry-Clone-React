@@ -1,0 +1,51 @@
+.promotion-card {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.promotion-card__image {
+  max-width: 200px;
+}
+
+.promotion-card__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.promotion-card__title {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.promotion-card__price {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 42px;
+  line-height: 59px;
+  color: var(--gray-dark-color);
+  margin: 1rem 0;
+}
+
+.promotion-card__comments {
+  font-size: 24px;
+  color: var(--gray-dark-color);
+}
+
+.promotion-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 14px;
+  color: #4b96de;
+}
+
+.promotion-card__link {
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  color: #4b96de;
+}
