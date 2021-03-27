@@ -1,5 +1,6 @@
 import React from 'react';
 import PromotionCard from 'Components/Promotion/Card/Card';
+import axios from 'axios';
 import 'style/App.css';
 
 const promotion = {
@@ -20,6 +21,8 @@ const promotion = {
 };
 
 const PagePromotionSearch = () => {
+  axios.get('http://localhost:5000/promotions?_embed=comments ');
+
   return (
     <div className="App">
       <PromotionCard promotion={promotion} />
