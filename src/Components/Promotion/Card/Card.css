@@ -3,6 +3,7 @@
   padding: 1rem;
   background-color: #fff;
   border-radius: 5px;
+  margin: 2rem 0;
 }
 
 .promotion-card__image {
@@ -13,6 +14,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  width: 100%;
 }
 
 .promotion-card__title {
@@ -27,6 +29,7 @@
   line-height: 59px;
   color: var(--gray-dark-color);
   margin: 1rem 0;
+  flex: 2;
 }
 
 .promotion-card__comments {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PagePromotionForm from './Promotion/Form/Form';
 import PagePromotionSearch from './Promotion/Search/Search';
 
