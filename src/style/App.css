@@ -38,8 +38,3 @@ a {
   text-decoration: none;
   color: var(--dark-color);
 }
-
-.App {
-  max-width: 900px;
-  margin: 2rem auto;
-}
