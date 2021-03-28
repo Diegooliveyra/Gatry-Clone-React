@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PagePromotionForm from './Promotion/Form/Form';
 import PagePromotionSearch from './Promotion/Search/Search';
+import 'style/App.css';
 
 const Root = () => {
   return (

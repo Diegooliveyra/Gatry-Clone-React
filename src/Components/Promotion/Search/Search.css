@@ -1,0 +1,35 @@
+.promotion-search {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promotion-search__input {
+  flex: 2;
+  background-color: aqua;
+}
+.promotion-search__input input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.promotion-search__input input:focus,
+.promotion-search__input input:hover {
+  outline: none;
+  border-color: white;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ff6095;
+}
+
+.promotion-search__link {
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  background-color: var(--green-color);
+  color: #fff;
+}
