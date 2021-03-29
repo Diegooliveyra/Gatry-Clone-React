@@ -1,0 +1,82 @@
+.promotion-form {
+  margin: 3rem 0;
+}
+
+.promotion-form__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.promotion-form__title h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.promotion-form__title a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff6095;
+  position: relative;
+}
+
+.promotion-form__title a::before {
+  content: '˂';
+  font-size: 1.8rem;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 30%;
+  position: absolute;
+  left: -25px;
+  top: -6px;
+}
+
+.promotion-form__title h1::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #ff6095;
+  border-radius: 30%;
+  position: absolute;
+  z-index: -1;
+  left: -12px;
+  top: -10px;
+}
+
+.promotion-form__group {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.promotion-form__group label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.promotion-form__group input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.promotion-form__group input:focus,
+.promotion-form__group input:hover {
+  outline: none;
+  border-color: white;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #ff6095;
+}
+
+.promotion-form__button button {
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--green-color);
+  color: #fff;
+  cursor: pointer;
+}
