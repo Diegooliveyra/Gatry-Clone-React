@@ -46,9 +46,10 @@
   color: #4b96de;
 }
 
-.promotion-card__link {
+.promotion-card__link a {
   border: 1px solid #ccc;
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   color: #4b96de;
+  margin-left: 20px;
 }
