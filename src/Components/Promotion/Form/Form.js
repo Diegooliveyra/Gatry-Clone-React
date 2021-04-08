@@ -20,7 +20,7 @@ const PromotionForm = ({ id }) => {
         setValues(response.data);
       });
     }
-  }, [id]);
+  }, []);
 
   function onChange({ target }) {
     const { name, value } = target;
