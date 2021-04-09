@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import useApi from '../../ultis/useApi';
 import axios from 'axios';
 import './Form.css';
 
@@ -13,12 +14,28 @@ const InitialValue = {
 const PromotionForm = ({ id }) => {
   const [values, setValues] = useState(id ? null : InitialValue);
   const history = useHistory();
+  const [load] = useApi({
+    url: `/promotions/${id}`,
+    method: 'get',
+    onCompleted: (response) => {
+      setValues(response.data);
+    },
+  });
+
+  const [save, saveInfo] = useApi({
+    url: id ? `/promotions/${id}` : '/promotions',
+    method: id ? 'put' : 'post',
+    data: values,
+    onCompleted: (response) => {
+      if (!response.error) {
+        history.push('/');
+      }
+    },
+  });
 
   useEffect(() => {
     if (id) {
-      axios.get(`http://localhost:5000/promotions/${id}`).then((response) => {
-        setValues(response.data);
-      });
+      load();
     }
   }, [id]);
 
@@ -29,12 +46,7 @@ const PromotionForm = ({ id }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const method = id ? 'put' : 'post';
-    const url = id
-      ? `http://localhost:5000/promotions/${id}`
-      : 'http://localhost:5000/promotions';
-
-    axios[method](url, values).then((response) => history.push('/'));
+    save();
   }
 
   return (
@@ -47,6 +59,7 @@ const PromotionForm = ({ id }) => {
         <div>Carregando...</div>
       ) : (
         <form onSubmit={handleSubmit}>
+          {saveInfo.loading && <span>Salvando Dados</span>}
           <div className="promotion-form__group">
             <label htmlFor="title">Titulo</label>
             <input
