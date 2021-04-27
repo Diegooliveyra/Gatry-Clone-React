@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import useApi from '../../ultis/useApi';
-import axios from 'axios';
 import './Form.css';
 
 const InitialValue = {
