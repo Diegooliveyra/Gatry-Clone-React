@@ -16,13 +16,12 @@
   },
   "scripts": {
     "start": " npm run startFullApp",
-    "server2": "json-server --watch db.json --port 5000",
+    "startFullApp": "concurrently \"npm run server\" \"npm run src\"",
+    "server": "json-server --watch db.json --port 6000",
+    "src": "cd src && npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "src": "cd src && npm start",
-    "server": "json-server --watch db.json --port 5000",
-    "startFullApp": "concurrently \"npm run server\" \"npm run src\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
