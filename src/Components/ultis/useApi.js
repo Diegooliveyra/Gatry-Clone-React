@@ -18,7 +18,7 @@ export default function useApi(config) {
     let response = null;
     try {
       response = await axios({
-        baseURL: 'https://localhost:5000',
+        baseURL: 'http://localhost:2000',
         ...config,
         ...localConfig,
       });
