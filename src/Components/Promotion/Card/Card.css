@@ -35,6 +35,10 @@
 .promotion-card__comments {
   font-size: 24px;
   color: var(--gray-dark-color);
+  max-width: 600px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .promotion-card__footer {
@@ -44,6 +48,12 @@
   margin-top: 1.5rem;
   font-size: 14px;
   color: #4b96de;
+}
+
+.promotion-card__footer button {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
 }
 
 .promotion-card__link a {
