@@ -1,6 +1,6 @@
-import Modal from 'Components/UI/Modal/Modal';
 import React, { useState } from 'react';
 import PromotionCard from '../Card/Card';
+import PromotionModal from '../Modal/Modal';
 
 const PromotionList = ({ loading, promotions, error }) => {
   const [promotionId, setPromotionId] = useState(null);
@@ -24,12 +24,10 @@ const PromotionList = ({ loading, promotions, error }) => {
           onClickComments={() => setPromotionId(promotion.id)}
         />
       ))}
-      <Modal
-        isOpen={Boolean(promotionId)}
+      <PromotionModal
+        promotionId={promotionId}
         onClickClose={() => setPromotionId(null)}
-      >
-        <h1>Comentarios</h1>
-      </Modal>
+      />
     </div>
   );
 };
