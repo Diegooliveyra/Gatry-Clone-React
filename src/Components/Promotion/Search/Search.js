@@ -11,6 +11,7 @@ const PromotionSearch = () => {
     debounceDelay: 300,
     url: '/promotions',
     method: 'get',
+    credentials: 'include',
     params: {
       _embed: 'comments',
       _order: 'desc',
