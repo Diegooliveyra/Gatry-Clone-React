@@ -1,0 +1,20 @@
+.promotion-modal-comments-tree__item {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.promotion-modal-comments-tree__item__avatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.promotion-modal-comments-tree__item__info p {
+  margin-top: 5px;
+}
+
+.promotion-modal-comments-tree__item__info__nome {
+  font-weight: 600;
+}

@@ -1,13 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'Components/UI/Modal/Modal';
 import useApi from 'Components/ultis/useApi';
+import PromotionModalCommentsTree from './CommentsTree/CommentsTree';
+import './Modal.css';
 
 const PromotionModal = ({ promotionId, onClickClose }) => {
+  const [comment, setComment] = useState('');
+
   const [load, loadInfo] = useApi({
     url: '/comments',
     params: {
       promotionId,
+      _expand: 'user',
     },
+  });
+
+  const [sendComment, sendCommentInfo] = useApi({
+    url: '/comments',
+    method: 'POST',
   });
 
   useEffect(() => {
@@ -15,10 +25,37 @@ const PromotionModal = ({ promotionId, onClickClose }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(loadInfo);
+  async function onSubmit(e) {
+    e.preventDefault();
+    try {
+      await sendComment({
+        data: {
+          userId: 1,
+          promotionId,
+          comment,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      sendComment('');
+      load();
+    }
+  }
+
   return (
-    <Modal isOpen={Boolean(promotionId)} onClickClose={onClickClose}>
-      <h1>Comentarios</h1>
+    <Modal isOpen onClickClose={onClickClose}>
+      <form className="promotion-modal__comment-form" onSubmit={onSubmit}>
+        <textarea
+          placeholder="Comentar..."
+          onChange={({ target }) => setComment(target.value)}
+          value={comment}
+        />
+        <button type="submit" disabled={sendCommentInfo.loading}>
+          {sendCommentInfo.loading ? 'Enviando' : 'Enviar'}
+        </button>
+      </form>
+      <PromotionModalCommentsTree comments={loadInfo.data} />
     </Modal>
   );
 };
