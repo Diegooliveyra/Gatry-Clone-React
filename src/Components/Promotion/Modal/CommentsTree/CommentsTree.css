@@ -1,7 +1,7 @@
 .promotion-modal-comments-tree__item {
   display: flex;
   font-size: 14px;
-  align-items: center;
+  margin-top: 20px;
 }
 
 .promotion-modal-comments-tree__item__avatar {
@@ -10,6 +10,9 @@
   border-radius: 50%;
   margin-right: 15px;
 }
+.promotion-modal-comments-tree__item__info {
+  width: 100%;
+}
 
 .promotion-modal-comments-tree__item__info p {
   margin-top: 5px;
@@ -17,4 +20,33 @@
 
 .promotion-modal-comments-tree__item__info__nome {
   font-weight: 600;
+}
+
+.promotion-modal-comments-tree__answer__button {
+  background-color: transparent;
+  border: 0;
+  color: #3498db;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.promotion-modal-comments-tree__comment-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.promotion-modal-comments-tree__comment-box textarea {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.promotion-modal-comments-tree__send-button {
+  background-color: transparent;
+  border: 0;
+  color: #3498db;
+  cursor: pointer;
+  margin: 0 20px;
 }

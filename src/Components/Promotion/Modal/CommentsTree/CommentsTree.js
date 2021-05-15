@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CommentsTree.css';
 
 const PromotionModalCommentsTree = ({ comments }) => {
+  const [activeCommentBox, setActiveCommentBox] = useState(null);
   if (!comments) {
     return <div>Carregando..</div>;
   }
@@ -20,6 +21,28 @@ const PromotionModalCommentsTree = ({ comments }) => {
               {item.user.nome}
             </span>
             <p>{item.comment}</p>
+            <button
+              type="button"
+              className="promotion-modal-comments-tree__answer__button"
+              onClick={() =>
+                setActiveCommentBox(
+                  activeCommentBox === item.id ? null : item.id,
+                )
+              }
+            >
+              Responder
+            </button>
+            {activeCommentBox === item.id && (
+              <div className="promotion-modal-comments-tree__comment-box">
+                <textarea value="" onChange={() => {}} />
+                <button
+                  type="button"
+                  className="promotion-modal-comments-tree__send-button"
+                >
+                  Enviar
+                </button>
+              </div>
+            )}
           </div>
         </li>
       ))}
