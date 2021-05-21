@@ -2,8 +2,6 @@
 <img src=".github/logo.png" alt="react" width= "250px"/>
 </p>
 
-<br/>
-
 ## ℹ️ Sobre o projeto
 
 Projeto de um clone do site Gatry, baseado no curso do Vinicius Dacal.
