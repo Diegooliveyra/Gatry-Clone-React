@@ -91,6 +91,20 @@
     },
     {
       "id": 6
+    },
+    {
+      "userId": 1,
+      "promotionId": 1,
+      "comment": "test",
+      "parentId": 1,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "promotionId": 1,
+      "comment": "teste 2",
+      "parentId": 1,
+      "id": 8
     }
   ],
   "users": [

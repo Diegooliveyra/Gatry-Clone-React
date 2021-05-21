@@ -41,6 +41,8 @@
   width: 100%;
   border-radius: 4px;
   border: 1px solid #ddd;
+  padding: 15px 15px;
+  outline: none;
 }
 
 .promotion-modal-comments-tree__send-button {
